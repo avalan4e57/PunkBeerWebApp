@@ -1,0 +1,9 @@
+$nav-height: 3em;
+
+.header {
+  height: $nav-height;
+  background-color: black;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}

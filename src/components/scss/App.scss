@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.section1 {
+  height: 6em;
+  background-color: grey;
+  // position: relative;
+  // z-index: -2;
+}
+
+.section2 {
+  height: 6em;
+  background-color: yellow;
+  z-index: -2;
+}

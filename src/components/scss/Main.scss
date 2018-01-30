@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+
+  .gridItem {
+    height: 45em;
+    // background: tomato;
+    // border: 1px solid black;
+    flex: 1 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    .gridItem {
+      height: 20em;
+      flex: 1 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .container {
+    .gridItem {
+      height: 20em;
+    }
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .container {
+    .gridItem {
+      flex: 1 33.33333%;
+      max-width: 33.33333%;
+      height: 17em;
+    }
+  }
+}

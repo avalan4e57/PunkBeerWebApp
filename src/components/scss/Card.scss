@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  height: 44em;
+  max-width: 1300px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 0.5em;
+  padding: 1em;
+  // padding-left: 0;
+  & > * {
+    flex: 1 100%;
+    // border: 1px solid red;
+  }
+  .like {
+    height: 5%;
+    position: relative;
+    font-size: 1.5em;
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 1em;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      background: none;
+      cursor: pointer;
+      &:hover {
+        color: green;
+      }
+    }
+  }
+  .image {
+    height: 57.5%;
+    img {
+      max-height: 100%;
+    }
+  }
+  .description {
+    height: 37.5%;
+    overflow: hidden;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .card {
+    height: 19em;
+    // margin: 0 auto;
+    .like {
+      height: 10%;
+    }
+    .image {
+      flex-basis: 40%;
+      height: 90%;
+    }
+    .description {
+      text-align: left;
+      flex-basis: 60%;
+      height: 90%;
+    }
+  }
+}
+
+// @media all and (min-width: 992px) {
+//   .card {
+//     height: 20em;
+//   }
+// }
+
+@media all and (min-width: 1200px) {
+  .card {
+    height: 16em;
+  }
+}

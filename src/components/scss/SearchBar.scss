@@ -1,0 +1,21 @@
+button {
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  border-radius: 5px 0 0 5px;
+}
+
+button, input[type="text"] {
+  padding: 1em;
+  border: 1px solid blue;
+  font-size: 1em;
+  // line-height: 2em;
+}
+
+.searchBar {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1.4em 0;
+}
