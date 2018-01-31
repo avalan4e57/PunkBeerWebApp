@@ -9,6 +9,15 @@
   margin: 0 0.5em;
   padding: 1em;
   // padding-left: 0;
+  // &:hover {
+  //   z-index: 2;
+  //   height: 90vh;
+  //   opacity: .89;
+  //   background: yellow;
+  //   position: fixed;
+  //   top: 2em;
+  //   left: 0;
+  // }
   & > * {
     flex: 1 100%;
     // border: 1px solid red;
@@ -41,6 +50,7 @@
   .description {
     height: 37.5%;
     overflow: hidden;
+    max-height: 12.2em;
   }
 }
 
