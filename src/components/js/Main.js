@@ -6,11 +6,11 @@ class Main extends Component {
   render() {
     return(
       <div className={ styles.container }>
-        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } /></div>
-        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } /></div>
-        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } /></div>
-        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } /></div>
-        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } /></div>
+        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } type={ this.props.type } isActive={ true } /></div>
+        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } type={ this.props.type } /></div>
+        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } type={ this.props.type } /></div>
+        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } type={ this.props.type } /></div>
+        <div className={ styles.gridItem}><Card symbol={ this.props.symbol } type={ this.props.type } /></div>
       </div>
     )
   }

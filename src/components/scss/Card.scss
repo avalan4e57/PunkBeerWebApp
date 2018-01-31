@@ -22,7 +22,7 @@
     flex: 1 100%;
     // border: 1px solid red;
   }
-  .like {
+  .like, .cross {
     height: 5%;
     position: relative;
     font-size: 1.5em;
@@ -36,11 +36,26 @@
       padding: 0;
       background: none;
       cursor: pointer;
+    }
+  }
+
+  .like {
+    button:hover, button.active {
+      color: green;
+    }
+  }
+
+  .cross {
+    button {
+      color: red;
+      transition: font-size .5s;
       &:hover {
-        color: green;
+        font-size: 1.2em;
+        transition: font-size .5s;
       }
     }
   }
+
   .image {
     height: 57.5%;
     img {
@@ -58,7 +73,7 @@
   .card {
     height: 19em;
     // margin: 0 auto;
-    .like {
+    .like, .cross {
       height: 10%;
     }
     .image {

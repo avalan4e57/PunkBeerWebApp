@@ -3,10 +3,24 @@ import styles from './../scss/Card.scss'
 
 class Card extends Component {
   render() {
+    let likeORcross = null
+    if (this.props.type == 'home') {
+      likeORcross = styles.like
+    } else if (this.props.type == 'favourites') {
+      likeORcross = styles.cross
+    } else {
+      console.log('Error: Main element "type" error')
+    }
+
+    let isActive = null
+    if (this.props.isActive) {
+      isActive = styles.active
+    }
+
     return(
       <div className={ styles.card }>
-        <div className={ styles.like }>
-          <button>{ this.props.symbol }</button>
+        <div className={ likeORcross }>
+          <button className={ isActive }>{ this.props.symbol }</button>
         </div>
         <div className={ styles.image }>
           {/* <img src="https://images.punkapi.com/v2/keg.png" /> */}

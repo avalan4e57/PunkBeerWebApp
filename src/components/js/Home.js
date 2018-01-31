@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import Main from './Main'
+import SearchBar from './SearchBar'
 
 class Home extends Component {
   render() {
     const symbol = "\u2606"
     return(
       <div className='home'>
-        <h1>Home</h1>
-        <Main symbol={ symbol } />
+        <SearchBar />
+        <Main symbol={ symbol } type='home' />
       </div>
     )
   }
