@@ -5,8 +5,8 @@ class SearchBar extends Component {
   render() {
     return(
       <div className={ styles.searchBar }>
-        <input type='text' />
-        <button>Search</button>
+        <input type='text' placeholder='Input search query...' onChange={ this.props.readQuery } />
+        <button onClick={ this.props.execQuery }>Search</button>
       </div>
     )
   }

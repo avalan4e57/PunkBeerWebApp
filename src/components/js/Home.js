@@ -7,7 +7,7 @@ class Home extends Component {
     const symbol = "\u2606"
     return(
       <div className='home'>
-        <SearchBar />
+        <SearchBar onSearch={ this.props.onSearch } readQuery={ this.props.readQuery } execQuery={ this.props.execQuery } />
         <Main
           symbol={ symbol }
           type='home'
