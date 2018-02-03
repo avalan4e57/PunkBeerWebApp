@@ -8,7 +8,12 @@ class Favourites extends Component {
     return(
       <div className='favourites'>
         <h1>Favourites</h1>
-        <Main symbol={ symbol } type='favourites' />
+        <Main
+          symbol={ symbol }
+          type='favourites'
+          cards={ this.props.cards }
+          onChoice={ this.props.onChoice}
+        />
       </div>
     )
   }

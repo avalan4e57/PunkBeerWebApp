@@ -8,7 +8,12 @@ class Home extends Component {
     return(
       <div className='home'>
         <SearchBar />
-        <Main symbol={ symbol } type='home' />
+        <Main
+          symbol={ symbol }
+          type='home'
+          cards={ this.props.cards }
+          onChoice={ this.props.onChoice }
+        />
       </div>
     )
   }
