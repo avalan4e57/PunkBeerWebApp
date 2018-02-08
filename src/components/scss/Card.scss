@@ -1,20 +1,24 @@
 .card {
+  // font-size: 1em;
   display: flex;
   flex-flow: row wrap;
   text-align: center;
   height: 44em;
   max-width: 1300px;
-  border: 1px solid black;
+  border: 0.05em solid black;
   border-radius: 5px;
   margin: 0 0.5em;
   padding: 1em;
+  // overflow: hidden;
   & > * {
     flex: 1 100%;
   }
   .like, .cross {
-    height: 5%;
+    // height: 5%;
+    height: 1.45em;
     position: relative;
-    font-size: 1.5em;
+    font-size: 1.45em;
+    line-height: 1;
     button {
       position: absolute;
       bottom: 0;
@@ -46,15 +50,27 @@
   }
 
   .image {
-    height: 57.5%;
+    // height: 57.5%;
+    height: 23em;
     img {
       max-height: 100%;
     }
   }
   .description {
-    height: 37.5%;
+    height: 16.25em;
+    font-size: 1em;
+    line-height: 1.25;
+    // height: 37.5%;
     overflow: hidden;
-    max-height: 12.2em;
+    h2 {
+      font-size: 2em;
+      // line-height: 1;
+      margin: 0.625em auto;
+    }
+    p {
+      margin: 0;
+      // overflow: hidden;
+    }
   }
 }
 
@@ -63,16 +79,18 @@
     height: 19em;
     // margin: 0 auto;
     .like, .cross {
-      height: 10%;
+      // height: 1.45em;
+      // font-size: 1.45em;
+      // line-height: 1;
     }
     .image {
       flex-basis: 40%;
-      height: 90%;
+      height: 15em;
     }
     .description {
       text-align: left;
       flex-basis: 60%;
-      height: 90%;
+      height: 13.75em;
     }
   }
 }
@@ -86,5 +104,11 @@
 @media all and (min-width: 1200px) {
   .card {
     height: 16em;
+    .image {
+      height: 12em;
+    }
+    .description {
+      height: 11em;
+    }
   }
 }
