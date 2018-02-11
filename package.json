@@ -1,7 +1,6 @@
 {
   "name": "PunkBeerWebApp",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/avalan4e57/PunkBeerWebApp.git",
   "author": "Igor Chernega <am.igor.chernega@gmail.com>",
   "license": "MIT",
