@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'herokuApp'),
+    contentBase: path.join(__dirname, 'herokuApp/public'),
     publicPath: '/assets/'
   }
 })
