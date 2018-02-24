@@ -1,8 +1,16 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './components/js/App.js'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import sbApp from './reducers'
+import App from './components/App'
+
+let store = createStore(sbApp)
+window.store = store
 
 render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 )
