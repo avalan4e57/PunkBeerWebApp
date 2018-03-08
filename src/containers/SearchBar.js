@@ -21,8 +21,7 @@ let SearchBar = ({ dispatch }) => {
           // input.value = ''
           fetch('https://api.punkapi.com/v2/beers/' + input.value)
             .then(resp => resp.json())
-            .then(data => {
-              let cards = data.map(item => ({
+            .then(data => data.map(item => ({
                   id: item.id,
                   image: item.image_url,
                   name: item.name,
@@ -30,8 +29,9 @@ let SearchBar = ({ dispatch }) => {
                   selected: false
                 })
               )
-              dispatch(getCards(cards))
-            })
+            )
+            .then(cards => dispatch(getCards(cards)))
+            .catch(error => console.log(error))
         }}
       >
         <input
