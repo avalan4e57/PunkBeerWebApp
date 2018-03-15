@@ -29,11 +29,14 @@
       padding: 0;
       background: none;
       cursor: pointer;
+      &:focus {
+        outline: none;
+      }
     }
   }
 
   .like {
-    button:hover, button.active {
+    button:hover, button:focus, button.active {
       color: green;
     }
   }
@@ -42,7 +45,7 @@
     button {
       color: red;
       transition: font-size .5s;
-      &:hover {
+      &:hover, &:focus {
         font-size: 1.2em;
         transition: font-size .5s;
       }

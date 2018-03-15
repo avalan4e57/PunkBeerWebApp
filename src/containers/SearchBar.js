@@ -31,7 +31,12 @@ let SearchBar = ({ dispatch }) => {
               )
             )
             .then(cards => dispatch(getCards(cards)))
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+                console.log('Bad request')
+                dispatch(getCards([]))
+              }
+            )
         }}
       >
         <input

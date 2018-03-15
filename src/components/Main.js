@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styles from '../styles/Main.scss'
 import Card from './Card'
 import PropTypes from 'prop-types'
+import InstructionsTable from './InstructionsTable'
 
 // const Main = ({ cards, type, onChoice }) => (
 //   <div className={ styles.container }>
@@ -27,7 +28,8 @@ const Main = ({ cards, type, onChoice }) => {
   if (cards.length === 0) {
     return (
       <div className={ styles.container }>
-        <p>You can use <a href='https://punkapi.com/documentation/v2'>Punk API docs</a> to get some custom result or just hint 'Search' button to see the result of baisc request which is like <span>https://api.punkapi.com/v2/beers</span>.</p>
+        <InstructionsTable />
+        {/* <p>You can visit <a href='https://punkapi.com/documentation/v2'>Punk API docs</a> to learn how to use queries on this web site or just hint 'Search' button with an empty query to see the result of basic request which is like <span>https://api.punkapi.com/v2/beers</span>.</p> */}
       </div>
     )
   } else {
