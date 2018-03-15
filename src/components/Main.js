@@ -25,11 +25,19 @@ import InstructionsTable from './InstructionsTable'
 // )
 
 const Main = ({ cards, type, onChoice }) => {
-  if (cards.length === 0) {
+  if (cards.length === 0 && type === 'home') {
     return (
       <div className={ styles.container }>
         <InstructionsTable />
         {/* <p>You can visit <a href='https://punkapi.com/documentation/v2'>Punk API docs</a> to learn how to use queries on this web site or just hint 'Search' button with an empty query to see the result of basic request which is like <span>https://api.punkapi.com/v2/beers</span>.</p> */}
+      </div>
+    )
+  } else if(cards.length === 0 && type === 'favourites') {
+    return (
+      <div style={{'display': 'flex', 'jusifyContent': 'center'}}>
+        <p style={{'flex': '1 100%', 'textAlign': 'center'}}>
+          Favourites will be displayed here after you choose some cards from API request
+        </p>
       </div>
     )
   } else {

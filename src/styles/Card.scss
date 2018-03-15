@@ -9,6 +9,17 @@
   border-radius: 5px;
   margin: 0 0.5em;
   padding: 1em;
+  &:hover {
+    box-shadow: 0 1em 1em .5em rgba(0,0,0,0.4);
+    margin: 0 0 -.5em;
+    .like, .cross {
+      button {
+        top: .3em;
+        right: .3em;
+      }
+    }
+  }
+  box-shadow: 0 .5em 1em 0 rgba(0,0,0,0.4);
   // overflow: hidden;
   & > * {
     flex: 1 100%;
@@ -44,11 +55,11 @@
   .cross {
     button {
       color: red;
-      transition: font-size .5s;
-      &:hover, &:focus {
-        font-size: 1.2em;
-        transition: font-size .5s;
-      }
+      // transition: font-size .5s;
+      // &:hover, &:focus {
+      //   font-size: 1.2em;
+      //   transition: font-size .5s;
+      // }
     }
   }
 
@@ -80,6 +91,9 @@
 @media all and (min-width: 768px) {
   .card {
     height: 19em;
+    &:hover {
+      height: 20em;
+    }
     // margin: 0 auto;
     .like, .cross {
       // height: 1.45em;
@@ -107,6 +121,9 @@
 @media all and (min-width: 1200px) {
   .card {
     height: 16em;
+    &:hover {
+      height: 17em;
+    }
     .image {
       height: 12em;
     }
